@@ -49,8 +49,8 @@ $(document).ready(function () {
             window.gWidth = svg.attr("width");
 
             // remove h/w for proper fullscreen
-            svg = svg.removeAttr('height');
-            svg = svg.removeAttr('width');
+            svg = svg.setattribute('height', 1000);
+            svg = svg.setattribute('width', 1000);
             svg = svg.removeAttr('inkscape:version');
             svg = svg.removeAttr('sodipodi:docname');
 
@@ -173,8 +173,8 @@ function SVGPNG(cb) {
     document.body.appendChild(temp);
     temp.onload = function onload() {
         let canvas = document.createElement("canvas");
-        canvas.width = 1000;
-        canvas.height = 500;
+        canvas.width = temp.clientWidth;
+        canvas.height = temp.clientHeight + 100;
         let ctx = canvas.getContext("2d");
         ctx.drawImage(temp, 0, 150);
         ctx.font = "25px sans-serif";
