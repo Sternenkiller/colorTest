@@ -162,9 +162,9 @@ $(document).ready(function () {
 
 
 function SVGPNG(cb) {
-    svg = document.getElementById("glider").outerHTML;
-    svg.setAttribute('width', window.gHeight);
-    svg.setAttribute('height', window.gWidth);
+    svg = document.getElementById("glider");
+    //svg.setAttribute('width', window.gHeight);
+    //svg.setAttribute('height', window.gWidth);
     
     let temp = document.createElement("img");
     let imageSrc = URL.createObjectURL(
