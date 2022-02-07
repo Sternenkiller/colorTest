@@ -48,9 +48,6 @@ $(document).ready(function () {
             window.gHeight = svg.attr("height");
             window.gWidth = svg.attr("width");
 
-            // remove h/w for proper fullscreen
-            svg.attr('width', 1400);
-            svg.attr('height', 951);
             svg = svg.removeAttr('inkscape:version');
             svg = svg.removeAttr('sodipodi:docname');
 
