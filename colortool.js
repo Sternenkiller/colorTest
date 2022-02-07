@@ -164,6 +164,8 @@ $(document).ready(function () {
 function SVGPNG(cb) {
     svg = document.getElementById("glider").outerHTML;
     svg2 = document.getElementById("glider");
+    let height123 = svg2.attr("height");
+    svg2.setAttribute('height', '1000px');
     svg3 = [svg];
     //svg.setAttribute('width', window.gHeight);
     //svg.setAttribute('height', window.gWidth);
