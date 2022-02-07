@@ -49,8 +49,8 @@ $(document).ready(function () {
             window.gWidth = svg.attr("width");
 
             // remove h/w for proper fullscreen
-            svg = svg.removeAttr('height');
-            svg = svg.removeAttr('width');
+            svg = svg.setAttribute('width', 1400);
+            svg = svg.setAttribute('height', 951);
             svg = svg.removeAttr('inkscape:version');
             svg = svg.removeAttr('sodipodi:docname');
 
@@ -163,17 +163,11 @@ $(document).ready(function () {
 
 function SVGPNG(cb) {
     svg = document.getElementById("glider").outerHTML;
-    svg2 = document.getElementById("glider");
-
-    //svg.setAttribute('width', window.gHeight);
-    //svg.setAttribute('height', window.gWidth);
     
     let temp = document.createElement("img");
-    let imageSrc = URL.createObjectURL(
-        new Blob([svg], { type: "image/svg+xml" })
-    );
+    let imageSrc = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" })
 
-    temp.src = svg2;
+    temp.src = imageSrc;
     temp.setAttribute("style", "position:fixed;left:-200vw;");
     document.body.appendChild(temp);
     temp.onload = function onload() {
