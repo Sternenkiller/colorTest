@@ -1,0 +1,185 @@
+<!-- Instructions: -->
+<!-- Only upload the static, CSS and JS files. And update the 2 links -->
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="Expires" content="Thu, 01 Jan 1970 00:00:00 GMT" />
+
+  <!-- when you upload this static CSS file you can update the URL like -->
+  <!-- <link rel="stylesheet" href="https://yourdomain.com/colortool.css"> -->
+
+  <link rel="stylesheet" href="colortool.css">
+  <noscript>Your Browser doesn't support or hasn't enabled Javascript. Please change that to use the color
+    tool.</noscript>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+      // config
+      window.gliderName = "mirage-2-rs-DE";      // without spaces -> it's also the name of the svg file
+      window.gliderSizes = ["XS", "S", "M", "L", "XL"];
+      window.parentURL = "";
+    });
+
+  </script>
+
+  <!-- when you upload this static JS file you can update the URL like -->
+  <!-- <script src="https://yourdomain.com/colortool.js"></script> -->
+
+  <script src="colortool.js"></script>
+
+
+</head>
+
+<body>
+
+  <div class="glider-svgimg"><img class="spinner" src="spinner.gif"><img id="glider" /></div>
+
+    </div>
+    <div style="background-color: none;">
+     
+     <div id="cross"></div>
+
+        <div id="colorbar">
+
+          <div id="swatches" style="height: auto; max-width: 650px;">
+            <div class="category-row">
+              <span>Obersegel, Fl&auml;che</span>
+              <div class="box-row">
+                <div class="box US" id="US1" data-color="#ffffff" data-id="1"></div>
+                <div class="box US" id="US2" data-color="#008DD2" data-id="2"></div>
+                <div class="box US" id="US3" data-color="#184053" data-id="3"></div>
+                <div class="box US" id="US4" data-color="#92D050" data-id="4"></div>
+                <div class="box US" id="US5" data-color="#FF6600" data-id="5"></div>
+                <div class="box US" id="US6" data-color="#C01E4E" data-id="6"></div>
+                <div class="box US" id="US7" data-color="#FF0000" data-id="7"></div>
+                <div class="box US" id="US8" data-color="#2B2A29" data-id="8"></div>
+              </div>
+            </div>
+
+
+            <div class="category-row">                         
+              <span>Pfeil links</span>
+              <div class="box-row">
+                <div class="box AL" id="AL1" data-color="#ffffff" data-id="1"></div>
+                <div class="box AL" id="AL2" data-color="#008DD2" data-id="2"></div>
+                <div class="box AL" id="AL3" data-color="#184053" data-id="3"></div>
+                <div class="box AL" id="AL4" data-color="#92D050" data-id="4"></div>
+                <div class="box AL" id="AL5" data-color="#FF6600" data-id="5"></div>
+                <div class="box AL" id="AL6" data-color="#C01E4E" data-id="6"></div>
+                <div class="box AL" id="AL7" data-color="#FF0000" data-id="7"></div>
+                <div class="box AL" id="AL8" data-color="#2B2A29" data-id="8"></div>
+              </div>
+            </div>
+        
+      <div class="category-row">
+              <span>Pfeil rechts</span>
+              <div class="box-row">
+                <div class="box AR" id="AR1" data-color="#ffffff" data-id="1"></div>
+                <div class="box AR" id="AR2" data-color="#008DD2" data-id="2"></div>
+                <div class="box AR" id="AR3" data-color="#184053" data-id="3"></div>
+                <div class="box AR" id="AR4" data-color="#92D050" data-id="4"></div>
+                <div class="box AR" id="AR5" data-color="#FF6600" data-id="5"></div>
+                <div class="box AR" id="AR6" data-color="#C01E4E" data-id="6"></div>
+                <div class="box AR" id="AR7" data-color="#FF0000" data-id="7"></div>
+                <div class="box AR" id="AR8" data-color="#2B2A29" data-id="8"></div>
+              </div>
+            </div>
+        
+        <div class="category-row">
+              <span>Farbereich links</span>
+              <div class="box-row">
+                <div class="box FL" id="FL1" data-color="#ffffff" data-id="1"></div>
+                <div class="box FL" id="FL2" data-color="#008DD2" data-id="2"></div>
+                <div class="box FL" id="FL3" data-color="#184053" data-id="3"></div>
+                <div class="box FL" id="FL4" data-color="#92D050" data-id="4"></div>
+                <div class="box FL" id="FL5" data-color="#FF6600" data-id="5"></div>
+                <div class="box FL" id="FL6" data-color="#C01E4E" data-id="6"></div>
+                <div class="box FL" id="FL7" data-color="#FF0000" data-id="7"></div>
+                <div class="box FL" id="FL8" data-color="#2B2A29" data-id="8"></div>
+              </div>
+            </div>
+        
+        <div class="category-row">
+              <span>Farbbereich rechts</span>
+              <div class="box-row">
+                <div class="box FR" id="FR1" data-color="#ffffff" data-id="1"></div>
+                <div class="box FR" id="FR2" data-color="#008DD2" data-id="2"></div>
+                <div class="box FR" id="FR3" data-color="#184053" data-id="3"></div>
+                <div class="box FR" id="FR4" data-color="#92D050" data-id="4"></div>
+                <div class="box FR" id="FR5" data-color="#FF6600" data-id="5"></div>
+                <div class="box FR" id="FR6" data-color="#C01E4E" data-id="6"></div>
+                <div class="box FR" id="FR7" data-color="#FF0000" data-id="7"></div>
+                <div class="box FR" id="FR8" data-color="#2B2A29" data-id="8"></div>
+              </div>
+            </div>
+
+    <div class="category-row">
+              <span>RAST - Streifen</span>
+              <div class="box-row">
+                <div class="box RS" id="RS1" data-color="#ffffff" data-id="1"></div>
+                <div class="box RS" id="RS2" data-color="#008DD2" data-id="2"></div>
+                <div class="box RS" id="RS3" data-color="#184053" data-id="3"></div>
+                <div class="box RS" id="RS4" data-color="#92D050" data-id="4"></div>
+                <div class="box RS" id="RS5" data-color="#FF6600" data-id="5"></div>
+                <div class="box RS" id="RS6" data-color="#C01E4E" data-id="6"></div>
+                <div class="box RS" id="RS7" data-color="#FF0000" data-id="7"></div>
+                <div class="box RS" id="RS8" data-color="#2B2A29" data-id="8"></div>
+              </div>
+            </div>
+        
+          <!-- row end -->
+        </div>
+
+
+        <div class="button-style">
+
+          <div align="center">
+            <button class="button2" >Design
+              zurücksetzen</button>
+          </div>
+
+          <br>
+          <div align="center">
+            <button class="button" onclick="onPNG()">Design
+              als PNG downloaden!</button>
+          </div>
+
+          <!-- Sharing-disablet 
+          <div align="center">
+            <a class="button" id="share_fb" target="_blank">Design
+              als PNG downloaden!</a>
+          </div> -->
+        </div>
+
+      </section>
+    </div>
+
+
+<div align="center">
+
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+  $(function() {
+setTimeout(function() { $(".spinner").fadeOut(1500); }, 6000)
+})
+
+</script>
+
+</body>
+
+</html>

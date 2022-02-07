@@ -1,0 +1,278 @@
+html {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: 100%;
+
+    font-family: Montserrat;
+}
+body{
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 11px;
+}
+
+h3 {
+    display: block;
+    font-size: 9px;
+}
+
+
+body {
+    width:  100%;
+  margin-left: auto;
+    margin-right: auto;
+    background: none !important;
+}
+
+
+#glider {
+background: #ffffff !important;
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:  100%;
+    max-width: 700px;
+
+}
+
+
+#colorbar {
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 60px;
+    max-width: 500px;
+    /* height: 100%; */
+        border-size:0px;
+        b
+    border-style:solid;
+    border-color:grey;
+    margin-bottom: 10px;
+
+
+}
+
+
+
+#buttonBar {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    padding: 15px 0px;
+}
+
+.button {
+        background-color: #fcb923;
+    border: none;
+    color: #fff;
+    margin: 0px 5px;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: medium;
+    border-radius: 3px;
+    min-width: 30%;
+}
+
+.button2 {
+        background-color: #fcb923;
+    border: none;
+    color: #fff;
+    margin: 0px 5px;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: medium;
+    border-radius: 3px;
+    min-width: 30%;
+}
+
+
+
+#spoiler a {
+color:#ffffff;
+text-decoration:none;}
+#spoiler a span {
+display:none; }
+#spoiler a:active span, #spoiler a:focus span {
+display:block;}
+
+
+
+
+.full {
+    width: 100%;
+
+}
+
+.error {
+    color: #ff0000;
+}
+
+.sign {
+    display: none;
+}
+
+#swatches {
+margin-bottom: 40px;
+    padding: 3px;
+    stroke: #000;
+    stroke-width: 2;
+    stroke-opacity: 0.1;
+
+}
+
+#selection {
+    stroke: #000000;
+    stroke-opacity: 1;
+    fill: none;
+    stroke-width: 3;
+
+}
+
+
+
+/*  */
+
+.category-row{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.category-row span{
+    width: 180px;
+    margin-left: 13px;
+}
+
+.box-row{
+    display: flex;
+    margin-left:50px;
+}
+
+.box{
+   width: 26px;
+    height: 20px;
+    border: 1px solid #d1d1d1;
+    cursor: pointer;
+    margin-right: 2px;
+border-radius: 3px;
+
+}
+
+
+.box.active{
+   outline: 2px solid;
+    width: 28px;
+    height: 22px;
+    border-radius: 3px;
+
+}
+
+
+.button-style{
+    display: flex; 
+    justify-content: center;
+}
+
+.button2-style{
+    display: flex; 
+    justify-content: center;
+}
+
+
+.glider-svgimg
+{
+     min-height: 300px;
+}
+
+.glider-svgimg .spinner
+{
+text-align: center;
+    display: block;
+    margin: 40px auto;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1; 
+}
+
+.svg_cont{
+position: relative;
+}
+
+#cross{
+position: absolute;
+top: 14%;
+right: 25%;
+padding: 1rem;
+border: 2px solid red;
+display: none;
+}
+
+#cross.black{
+border: 2px solid black;
+}
+
+#cross.black svg{
+fill: black;
+}
+
+#cross svg{
+width: 70px;
+fill: red;
+}
+
+
+@media screen and (max-width: 760px) {
+    .button-style{
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .category-row{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .category-row .box-row{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .category-row span{
+        padding-bottom: 10px;
+        align-item: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #colorbar {
+        padding: 10px 10px;
+    
+
+}
+
+
+
+  }
+
