@@ -61,11 +61,12 @@ $(document).ready(function () {
 
             // set colors from URL
             getUrlParameters()
-
-        }, 'xml');
         
-        let colorbar = document.getElementById("colorbar");
-        colorbar.style.display = "block";
+            let colorbar = document.getElementById("colorbar");
+            colorbar.style.display = "block";
+            
+        }, 'xml');
+
     });
 
 
