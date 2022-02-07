@@ -165,7 +165,9 @@ function SVGPNG(cb) {
     svg = document.getElementById("glider").outerHTML;
     
     let temp = document.createElement("img");
-    let imageSrc = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" });
+    let imageSrc = URL.createObjectURL(
+        new Blob([svg], { type: "image/svg+xml" })
+    );
                                        
     temp.src = imageSrc;
     temp.setAttribute("style", "position:fixed;left:-200vw;");
