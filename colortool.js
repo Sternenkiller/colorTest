@@ -63,7 +63,9 @@ $(document).ready(function () {
             getUrlParameters()
 
         }, 'xml');
-
+        
+        let colorbar = document.getElementById("colorbar");
+        colorbar.style.display = "block";
     });
 
 
