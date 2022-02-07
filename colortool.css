@@ -42,7 +42,7 @@ background: #ffffff !important;
     margin-right: auto;
     width:  100%;
     max-width: 700px;
-
+    object-fit: cover;
 }
 
 
