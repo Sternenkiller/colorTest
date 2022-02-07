@@ -164,9 +164,7 @@ $(document).ready(function () {
 function SVGPNG(cb) {
     svg = document.getElementById("glider").outerHTML;
     svg2 = document.getElementById("glider");
-    let height123 = svg2.attr("height");
-    svg2.setAttribute('height', '1000px');
-    svg3 = [svg];
+
     //svg.setAttribute('width', window.gHeight);
     //svg.setAttribute('height', window.gWidth);
     
@@ -175,7 +173,7 @@ function SVGPNG(cb) {
         new Blob([svg], { type: "image/svg+xml" })
     );
 
-    temp.src = imageSrc;
+    temp.src = svg2;
     temp.setAttribute("style", "position:fixed;left:-200vw;");
     document.body.appendChild(temp);
     temp.onload = function onload() {
