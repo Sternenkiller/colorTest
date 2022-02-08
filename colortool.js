@@ -174,7 +174,7 @@ function SVGPNG(cb) {
         canvas.width = temp.clientWidth;
         canvas.height = temp.clientHeight + 100;
         let ctx = canvas.getContext("2d");
-        ctx.drawImage(temp, 0, 150);
+        ctx.drawImage(temp, 0, 0);
         ctx.font = "25px sans-serif";
         ctx.fillText("Time: " + new Date().toLocaleString(), 10, 35);
 
