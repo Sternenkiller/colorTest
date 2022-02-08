@@ -174,7 +174,7 @@ function SVGPNG(cb) {
         canvas.width = temp.clientWidth;
         canvas.height = temp.clientHeight + 100;
         let ctx = canvas.getContext("2d");
-        ctx.drawImage(temp, 0, 0);
+        ctx.drawImage(temp, 150, 0);
         ctx.font = "25px sans-serif";
         ctx.fillText("Time: " + new Date().toLocaleString(), 10, 35);
 
@@ -184,7 +184,7 @@ function SVGPNG(cb) {
 ctx.font = "18px sans-serif";
         ctx.fillText("Designcode: " + window.location.href.split("?")[1], 10, 110);
 
-        let src = canvas.toDataURL("image/jpg");
+        let src = canvas.toDataURL("image/png");
         cb(src, canvas);
         temp.remove();
         URL.revokeObjectURL(imageSrc);
