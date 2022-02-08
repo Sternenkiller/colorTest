@@ -184,7 +184,7 @@ function SVGPNG(cb) {
 ctx.font = "18px sans-serif";
         ctx.fillText("Designcode: " + window.location.href.split("?")[1], 10, 110);
 
-        let src = canvas.toDataURL("image/png");
+        let src = canvas.toDataURL("image/jpg");
         cb(src, canvas);
         temp.remove();
         URL.revokeObjectURL(imageSrc);
